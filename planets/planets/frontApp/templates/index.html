@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Future Planet</title>
+        <link href="{% static 'img/future.jpeg' %}" rel="icon">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link href="/static/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+<!--        <div class="container-fluid bg-dark px-5 d-none d-lg-block">-->
+<!--            <div class="row gx-0 align-items-center" style="height: 45px;">-->
+<!--                <div class="col-lg-8 text-center text-lg-start mb-lg-0">-->
+<!--                    <div class="d-flex flex-wrap">-->
+<!--&lt;!&ndash;                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>&ndash;&gt;-->
+<!--                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 7356037335</a>-->
+<!--                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 9995299517</a>-->
+<!--                        <a href="mailto:futureplaneteducareer@gmail.com" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>futureplaneteducareer@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--&lt;!&ndash;                        <a  class="text-light me-0"><i class="fas  text-primary me-2"></i><b>Mon - Sat : 10.00 am - 5.00 pm <br> &nbsp; Sun : 10.00 am - 2.00 pm</b></a>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 text-center text-lg-end">-->
+<!--                    <div class="d-flex align-items-center justify-content-end">-->
+<!--&lt;!&ndash;                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-facebook-f"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <a href="#" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-twitter"></i></a>&ndash;&gt;-->
+<!--                        <a href="https://www.instagram.com/future__planet__?igsh=MXNndnc0YWlnYWswYw" class="btn btn-light btn-square border rounded-circle nav-fill me-3"><i class="fab fa-instagram"></i></a>-->
+<!--                        <a href="https://wa.me/message/CSWA75BYSMCND1" class="btn btn-light btn-square border rounded-circle nav-fill me-0"><i class="fab fa-whatsapp"></i></a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!-- Topbar End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="{% url 'indexpage' %}" class="navbar-brand p-0">
+                     <img src="/static/img/future.jpeg" alt="Logo">
+                    <h1 class="text-primary m-0"><i class="fas  me-3"><em style="color:black"><b> FUTURE</b> </em>  <em style="color:#0096FF;"> <b>PLANET</b></em> </i></em> <font size="3px"><em style="color:black">Edu Career Solution Pvt.Ltd</em></font></h1>
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="{% url 'indexpage' %}" class="nav-item nav-link active">Home</a>
+                        <a href="{% url 'aboutpage' %}" class="nav-item nav-link">About</a>
+                        <a href="{% url 'servicepage' %}" class="nav-item nav-link">Services</a>
+                        <a href="{% url 'contactpage' %}" class="nav-item nav-link">Contact Us</a>
+<!--                        <div class="nav-item dropdown">-->
+<!--                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>-->
+<!--                            <div class="dropdown-menu m-0">-->
+<!--                                <a href="appointment.html" class="dropdown-item">Appointment</a>-->
+<!--                                <a href="feature.html" class="dropdown-item">Features</a>-->
+<!--                                <a href="blog.html" class="dropdown-item">Our Blog</a>-->
+<!--                                <a href="team.html" class="dropdown-item">Our Team</a>-->
+<!--                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>-->
+<!--                                <a href="404.html" class="dropdown-item">404 Page</a>-->
+<!--                            </div>-->
+                        </div>
+
+<!--                    </div>-->
+<!--                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Book Appointment</a>-->
+                </div>
+            </nav>
+            {% block content %}
+
+
+
+
+
+            <!-- Carousel Start -->
+            <div class="header-carousel owl-carousel">
+                <div class="header-carousel-item">
+                    <img src="/static/img/frontimg1.jpeg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content p-3">
+                            <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;"></h5>
+                            <h1 class="display-1 text-capitalize text-white mb-4">Full Fill Your Dreams...!<br>Join With Us<br> <em style="color:black;"><b>FUTURE</b></em> <em style="color:#0096FF;"><b>PLANET</b></h1>
+<!--                            <p class="mb-5 fs-15 animated slideInDown">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,-->
+<!--                            </p>-->
+<!--                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">View Courses</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="header-carousel-item">
+                    <img src="/static/img/frnt page2.jpeg" class="img-fluid w-100" alt="Image">
+                    <div class="carousel-caption">
+                        <div class="carousel-caption-content p-3">
+<!--                            <h5 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Physiotherapy Center</h5>-->
+                            <h1 class="display-1 text-capitalize text-white mb-4 hp"><em style="color:black;">What's</em> <em style="color:blue;">Next ?</em></h1>
+                            <p class="mb-5 fs-5">&nbsp; &nbsp;Whatever career you choose<br>
+                                  &nbsp; &nbsp;Or struggling to find a career<br>
+                                that suit your taste's<br>
+                                we are hear to solve your doubts,<br>
+                                To select good courses and help you</p>
+<!--                            </p>-->
+<!--                            <h1 class="display-1 text-capitalize text-white mb-4" align="right"><em style="color:black;">What's</em> <em style="color:blue;">Next ?</em></h1>-->
+<!--                            <p class="mb-5 fs-5 text-white " align="right justify">  &nbsp; &nbsp;Whatever career you choose<br>-->
+<!--                                  &nbsp; &nbsp;Or struggling to find a career<br>-->
+<!--                                 &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp;that suit your taste's<br>-->
+<!--                                 &nbsp;we are hear to solve your doubts,<br>-->
+<!--                                To select good courses and help you</p>-->
+<!--                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Book Appointment</a>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Carousel End -->
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+
+
+        <!-- Services Start -->
+        <div class="container-fluid service py-5">
+            <div class="container py-5">
+                <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="sub-style">
+                        <h4 class="sub-title px-3 mb-0"><font color="black"><b>Who Are We!</b></font></h4>
+                    </div><br>
+                    <br><p class="hp"><font color="black"><b> We are pioneers in admission guidance for over a decades. <br> When it comes to reliable and dedicated services, you will experience <br>
+                        <b> Future Planet Edu Career Solution Pvt Ltd </b> as Top Education Consultants in Kerala.<br>
+                    We are dedicated to turning your academic dreams in to reality.</b></font></p>
+                      <h1 class="display-3 mb-4">OUR COURSES...!</h1>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/medical.jpeg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-3">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" align="justify"><b>Medical Courses</b></h5>
+                                    <p class="mb-4 hp" ALIGN="justify"> A medical course is a rigorous program that prepares
+                                        individuals for careers in healthcare through extensive theoretical study and hands-on clinical experience. </p>
+                                    <a href="{% url 'medicalcourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/nurse.jpeg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4" align="justify">&nbsp;&nbsp;&nbsp;<b>Nursing</b></h5>
+                                    <p class="mb-4 hp" align="justify">A nursing course equips students with the essential knowledge, clinical skills,
+                                        and practical experience needed to excel in various healthcare settings as professional nurses.</p>
+                                    <a href="{% url 'nursingcourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/allied.jpg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4">&nbsp;&nbsp;<b>Allied Health Science</b></h5>
+                                    <p class="mb-4 hp" align="justify">Allied health science courses offer students a diverse education,
+                                        covering diagnostic, therapeutic, and support services, ultimately preparing them for rewarding careers in healthcare.
+                                    </p>
+                                    <a href="{% url 'alliedcourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/physio.jpg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content  bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4">&nbsp;&nbsp;<b>Physiotherapy</b></h5>
+                                    <p class="mb-4 hp" align="justify" >A physiotherapy course equips students with the skills to enhance patient
+                                        movement and manage pain through therapeutic exercises and manual therapy techniques.</p>
+
+                                    <a href="{% url 'physiotherapycourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/eng.jpg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4"><b>Engineering</b></h5>
+                                    <p class="mb-4 hp" align="justify">An engineering course equips students with the expertise to analyze, design, and create solutions for complex engineering problems,
+                                        fostering innovation and technological advancement in various industries.</p>
+                                    <a href="{% url 'engineercourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/comp.jpeg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4"><b>Computer Application Courses</b></h5>
+                                    <p class="mb-4 hp" ALIGN="justify">Computer application courses provide students with the skills and knowledge to effectively use software and technology
+                                        to solve problems and enhance productivity in various professional settings.</p>
+                                    <a href="{% url 'computerapp' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/commercehome.jpg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-2">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4"><b>Commerce Courses</b></h5>
+                                    <p class="mb-4 hp" align="justify">Commerce courses provide students with a broad understanding of business concepts,
+                                        financial practices, and economic principles, preparing them for diverse career opportunities in the global marketplace.</p>
+                                    <a href="{% url 'commercecourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="service-item rounded">
+                           <div class="service-img rounded-top">
+                                <img src="/static/img/otherhome.jpg" class="img-fluid rounded-top w-100" alt="">
+                           </div>
+                            <div class="service-content rounded-bottom bg-light p-3">
+                                <div class="service-content-inner">
+                                    <h5 class="mb-4"><b>Other Courses</b></h5>
+                                    <p class="mb-4 hp" align="justify">Other courses provide specialized education and training in diverse
+                                        fields, enabling students to develop expertise and pursue careers tailored to their interests and goals.
+                                    </p>
+                                    <a href="{% url 'othercourse' %}" class="btn btn-primary rounded-pill text-white py-2 px-4 mb-2">View Courses</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
+                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="{% url 'servicepage' %}">Services More</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Services End -->
+
+
+        <!-- About Start -->
+
+        <!-- Blog End -->
+<div class="container-xxl py-5 wow  bg-light zoomInDown" data-wow-delay="0.10s">
+        <div class="container">
+
+            <div class="text-center ">
+                          <h1 class="mb-5">Our Academic Partners...!</h1>
+                            </div>
+            <div class="owl-carousel owlCarousel testimonial-carousel position-relative">
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/sapthgiri.jpg" style="width: 200px; height: 200px;">
+
+                    <P><B><font color="black">Sapthagiri Institute of Medical Sciences & Research Centre</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/bgs.jpeg" style="width: 200px; height: 200px;">
+
+
+                    <P><B><font color="black">BGS Global Institute of Medical Sciences</font></B></P>
+       </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/eastwest.jpeg" style="width: 200px; height: 200px;">
+                    <P><B><font color="black">East West Institute of Technology EWIT College</font></B></P>
+
+
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/excelgroup.jpeg" style="width: 200px; height: 200px;">
+                    <P><B><font color="black">Excel Group Institutions</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/vydhehi.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Vydehi Institute of Medical Sciences and Research Centre</font></B></P>
+
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/kala.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Kalasalingam Academy of Research and Education</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/jss.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">JSS Academy of Higher Education and Research</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/mvm.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">MVM group of institutions Bangalore</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/nitte.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">NITTE University</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/rohini.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Rohini College of Engineering & Technology</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/presidency.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Presidency University</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/rvs.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">RVS Institute of Management Studies and Research </font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/savitha.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Saveetha University</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/spruthy.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Spurthy Institutions</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/srm.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">SRM University </font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/vinayaka.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Vinayaka Missions Research Foundation</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/yenopoya.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Yenepoya University</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/acharya.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Acharya Institutes</font></B></P>
+                </div>
+
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/ncat.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Nammazhvar College of Agriculture and Technology</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/ramaiah.jpg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Ramaiah Medical College</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/guru.png" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Guru Kashi University</font></B></P>
+                </div>
+                <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/kgi.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">Koshys Group of Institutions</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/sjb.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">BGS & SJB Group Of Institutions- Bengaluru</font></B></P>
+                </div>
+                 <div class="testimonial-item text-center"><br><br>
+                    <img class="border rounded-circle p-2 mx-auto mb-3" src="/static/img/kmtc.jpeg" style="width: 200px; height: 200px;">
+                     <P><B><font color="black">KMCT College of Engineering</font></B></P>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+        <br><br><br>
+<a class="blantershow-chat" href="https://wa.me/message/CSWA75BYSMCND1" title="Show Chat"><svg width="20" viewBox="0 0 24 24"><defs></defs>
+    <path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"></path>
+    <path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"></path>
+    <path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z">
+
+    </path></svg> Chat with Us</a>
+
+{% endblock %}
+      <a class="blantershow-chat" href="https://wa.me/message/CSWA75BYSMCND1" title="Show Chat"><svg width="20" viewBox="0 0 24 24"><defs></defs>
+    <path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"></path>
+    <path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"></path>
+    <path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z">
+
+    </path></svg> Chat with Us</a>
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4"><i class="fas me-3"></i></h4>
+                            <p class="text-white"><b>" Unlock Your Potential With Expert <br> Guidance On Your Academic Journey..."
+                            </b></p>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-share fa-2x text-white me-2"></i>
+<!--                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>-->
+<!--                                <a class="btn-square btn btn-primary text-white rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>-->
+                                <a class="btn-square btn btn-danger text-white rounded-circle mx-1" href="https://www.instagram.com/future__planet__?igsh=MXNndnc0YWlnYWswYw"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-success text-white rounded-circle mx-1" href="https://wa.me/message/CSWA75BYSMCND1"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Quick Links</h4>
+                            <a href="{% url 'indexpage' %}"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="{% url 'aboutpage' %}"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="{% url 'servicepage' %}"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="{% url 'contactpage' %}"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>-->
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>-->
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>-->
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Our Team</a>-->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Our Services</h4>
+                            <i class="fa fa-square">&nbsp &nbsp RECOGINZED INSTITUTES</i><br>
+                            <i class="fa fa-square">&nbsp &nbspCERTIFIED CAREER COUNCELORS</i><br>
+                            <i class="fa fa-square">&nbsp &nbsp PERSONALIZED CAREER GUIDANCE</i><br>
+                            <i class="fa fa-square">&nbsp &nbsp SCHOLARSHIPS</i><br>
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Massage Therapy</a>-->
+<!--                            <a href=""><i class="fas fa-angle-right me-2"></i> Rehabilitation</a>-->
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="mb-4 text-white">Contact Info</h4>
+<!--                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York, USA</a>-->
+                            <a href="mailto:futureplaneteducareer@gmail.com"><i class="fas fa-envelope me-2"></i>futureplaneteducareer@gmail.com</a>
+<!--                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>-->
+                            <a href=""><i class="fas fa-phone me-2"></i> +91 7356037335</a>
+                            <a href="" class="mb-3"><i class="fas fa-phone me-2"></i> +91 9037599517</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><i class="fas fa-copyright text-light me-2"></i> Copyright Future Planet education consultancy. All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+<!--                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/static/lib/wow/wow.min.js"></script>
+        <script src="/static/lib/easing/easing.min.js"></script>
+        <script src="/static/lib/waypoints/waypoints.min.js"></script>
+        <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="/static/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+    .hp{
+    font-style: normal;
+    }
+    .clr{
+    font-color: white;
+    }
+     .testimonial {
+    background: linear-gradient(rgba(104, 104, 106, 0.9), rgba(21, 185, 217, 0.9)), url(static/img/academiccouns.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.testimonial-carousel::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 200px;
+    }
+}
+
+@media (min-width: 992px) {
+    .testimonial-carousel::before,
+    .testimonial-carousel::after {
+        width: 300px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-text,
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text {
+    background: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-text * {
+    color: #FFFFFF !important;
+}
+
+.testimonial-carousel .owl-dots {
+    margin-top: 30px;
+    display: none;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: none;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #CCCCCC;
+    transition: .5s;
+}
+  a.blantershow-chat {
+  /*   background: #009688; */
+  background: #fff;
+  color: #404040;
+  position: fixed;
+  display: flex;
+  font-weight: 400;
+  justify-content: space-between;
+  z-index: 98;
+  bottom: 15px;
+  right: 75px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+}
+
+a.blantershow-chat svg {
+  transform: scale(1.2);
+  margin: 0 10px 0 0;
+}
+
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+</style>
+    </body>
+
+</html>
